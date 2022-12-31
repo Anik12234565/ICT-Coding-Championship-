@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+img{
+    align-self: center;
+}
+body{
+    background: linear-gradient(to right,#FF9933,#FFFFFF,#138808)
+}
+/* Custom scrollbar stylesheet */
+::-webkit-scrollbar{
+    width: 0px;
+}
+#scrollPath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(red, red, red, 0.05);
+}
+#progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    border-radius: 60px;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+}
+@keyframes animate{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+#progressbar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(10px);
+}
+#progressbar::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(30px);
+}
+/* Clock stylesheet */
+.wrap{
+    text-align: center;
+}
+/* Properties for h1 tag */
+h1{
+    font-size: 58px;
+    margin-bottom: 15px;
+}
+#clock span{
+    display: inline-block;
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #3f58b5;
+    box-shadow: 0 5px 15px #384b8f;
+    color: #ffffff;
+    margin: 0 15px;
+}
+#clock span:first-child{
+    margin-left: 0;
+}
+#clock span:last-child{
+    background-color: #e91e63;
+}
+#greetings{
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 42px;
+    padding: 20px 50px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px #bebebe;
+    animation: greetings 2s ease infinite 1s;
+}
+@keyframes greetings{
+    25%{
+        opacity: 0;
+    }
+}
+#btn{
+    cursor: pointer;
+    width: 200px;
+    height: 70px;
+    border-width: 4px;
+    border-radius: 35;
+    font-size: 35px;
+    font-weight: bolder;
+}
